@@ -10,6 +10,11 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.2/ref/settings/
 """
 
+
+import os
+import dj_database_url
+
+
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -20,10 +25,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-338=7_x)5_etyeez57gyp&g_sgqg5^&rv*c=n&v!!0p&zp%!(d'
+SECRET_KEY = SECRET_KEY = os.getenv('DJANGO_SECRET_KEY', 'dfgh567ñosklse5458%%%&3fghj85')
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+#Modificacion para produccion
+DEBUG = os.getenv('DEBUG', 'False') == 'True'
 
 ALLOWED_HOSTS = ['eco727-p2.onrender.com', 'localhost', '127.0.0.1']
 
@@ -131,5 +138,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",  # para desarrollo
-    "https://tu-frontend-en-netlify.netlify.app",  # cuando lo subas
+    "https://eco727-p2.netlify.app",  # cuando lo subas
 ]
+
+#(sirve para evitar errores con HTTPS y proxies en Render):
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
