@@ -27,12 +27,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = SECRET_KEY = os.getenv('DJANGO_SECRET_KEY', 'dfgh567ñosklse5458%%%&3fghj85')
 
-
 # SECURITY WARNING: don't run with debug turned on in production!
 #Modificacion para produccion
-DEBUG = os.getenv('DEBUG', 'False') == 'True'
+DEBUG = False
 
-ALLOWED_HOSTS = ['eco727-p2.onrender.com', 'localhost', '127.0.0.1']
+
+
+ALLOWED_HOSTS = [*]
 
 
 
@@ -138,7 +139,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",  # para desarrollo
-    "https://eco727-p2.netlify.app",  # cuando lo subas
+    "https://eco727-p2.netlify.app",  # cuando lo subas a netlify
 ]
 
 #(sirve para evitar errores con HTTPS y proxies en Render):
