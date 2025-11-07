@@ -217,3 +217,29 @@ footer {
     font-size: 0.85rem;
   }
 }
+
+
+/* ======== TABLA RESPONSIVA ======== */
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch; /* suaviza el desplazamiento en móviles */
+}
+
+.table-responsive table {
+  width: 100%;
+  min-width: 500px; /* evita que las columnas se amontonen demasiado */
+}
+
+/* Ajustes adicionales para pantallas pequeñas */
+@media (max-width: 480px) {
+  table {
+    font-size: 0.8rem;
+  }
+
+  th,
+  td {
+    padding: 0.5rem;
+    white-space: nowrap; /* evita que se rompa el texto en columnas pequeñas */
+  }
+}
