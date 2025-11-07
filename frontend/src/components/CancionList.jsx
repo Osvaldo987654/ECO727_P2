@@ -165,7 +165,15 @@ function CancionList() {
                                 <td>{c.comentarios}</td>
                                 <td>
                                     <button onClick={() => handleEdit(c)}>✏️ Editar</button>
-                                    <button onClick={() => deleteCancion(c.id)}>🗑️ Eliminar</button>
+                                    <button
+                                        onClick={() => {
+                                            if (window.confirm(`¿Estás seguro de que deseas eliminar "${c.titulo}"?`)) {
+                                                deleteCancion(c.id);
+                                            }
+                                        }}
+                                    >
+                                        🗑️ Eliminar
+                                    </button>
                                 </td>
                             </tr>
                         ))}
