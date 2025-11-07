@@ -10,7 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.2/ref/settings/
 """
 
-
+#Configurar dinámicamente la conexión a la base de datos
 import os
 import dj_database_url
 
@@ -28,11 +28,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = SECRET_KEY = os.getenv('DJANGO_SECRET_KEY', 'dfgh567ñosklse5458%%%&3fghj85')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-#Modificacion para produccion
+#Modificacion para produccion en caracter false y true para pruebas 
 DEBUG = False
 
 
-
+#Permite que hagamos pruebas locales y/o en producción
 ALLOWED_HOSTS = ['*']
 
 
@@ -137,6 +137,8 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+
+#Permite o bloquea las solicitudes HTTP
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",  # para desarrollo
     "https://eco727-p2.netlify.app",  # cuando lo subas a netlify
