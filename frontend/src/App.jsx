@@ -3,7 +3,6 @@ import HeroSection from './components/HeroSection';
 import Services from './components/Services';
 import Gallery from './components/Gallery';
 import Testimonials from './components/Testimonials';
-import ContactForm from './components/ContactForm';
 import Footer from './components/Footer';
 import Canciones from './components/CancionList';
 
@@ -30,7 +29,6 @@ function App() {
       <Services />
       <Gallery />
       <Testimonials />
-      <ContactForm />
       <Canciones />
       <Footer />
     </>

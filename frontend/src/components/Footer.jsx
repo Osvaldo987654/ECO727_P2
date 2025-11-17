@@ -1,7 +1,7 @@
 export default function Footer() {
     return (
         <footer>
-            <p>2025 Estudiantina de la UPIICSA | Derechos a quien corresponda.</p>
+            <p>©2025 Estudiantina de la UPIICSA | Derechos a quien corresponda.</p>
             <nav>
                 <a href="https://www.gob.mx/aviso_de_privacidad" target="_blank" >Aviso de Privacidad |</a>
                 <a href="https://www.facebook.com/estudiantina.de.la.upiicsa.del.ipn" target="_blank">Facebook |</a> 
