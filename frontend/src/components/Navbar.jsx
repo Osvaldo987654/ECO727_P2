@@ -9,6 +9,7 @@ export default function Navbar() {
         <a href="#galeria"> Galería | </a>
         <a href="#testimonios"> Testimonios | </a>
         <a href="#canciones">Canciones | </a>
+        
       </nav>
     </header>
   );
