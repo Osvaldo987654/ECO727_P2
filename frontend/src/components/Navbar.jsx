@@ -9,8 +9,7 @@ export default function Navbar() {
         <a href="#galeria"> Galería | </a>
         <a href="#testimonios"> Testimonios | </a>
         <a href="#canciones">Canciones | </a>
-        <a>Esto es una modifciacion para que realizar un deploy</a>
-      </nav>
+        </nav>
     </header>
   );
 }
