@@ -1,6 +1,6 @@
 import axios from "axios";
 
-//Archivo axion para creear un vinculo entre el backend y el frontend 
+// Conexión frontend (Netlify) → backend (Railway)
 export default axios.create({
-  baseURL: "https://eco727-p2.onrender.com/api/", // Dominio generado en render
+  baseURL: "https://eco727p2-production.up.railway.app/api/",
 });
